@@ -7,7 +7,7 @@ OBJETOS = $(DIR_OBJ)/main.o \
 		  $(DIR_OBJ)/http.o \
 		  $(DIR_OBJ)/veridic.o
 
-CPPFLAGS = -std=c++20 -lcurl -I$(DIR_INC)  -I/opt/ssl/include/ -L/opt/ssl/lib/ -lcrypto -pthread
+CPPFLAGS = -std=c++20 -lcurl -I$(DIR_INC)  -pthread
 COMPILER = g++
 
 
@@ -27,5 +27,7 @@ clean:
 	@rm -r $(DIR_BIN) $(DIR_OBJ)
 
 install:
+
+	apt-get install curl
 	apt-get install openssl -y
 	apt-get install libcurl4-openssl-dev -y

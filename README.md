@@ -7,7 +7,16 @@
 
 
 
-  
+ # prepare, build and run
+ 
+ ```
+   sudo make install
+   
+   make
+   
+   ./bin/bin
+ 
+ ```
 
 
 # curl-http-wrapper

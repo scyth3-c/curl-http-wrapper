@@ -84,6 +84,17 @@ make http requests easily in c++ using libcurl, contains two modules, raw http a
  
  ```c++
  
+  constructor:
+  
+    Veridic();
+    Veridic(URL);
+  
+  void setURL(URL);
+  
+  
+ 
+  [VERIDIC]
+  
   int post(FIELDS,  HEADERS,  OPTIONAL endpoint,  OPTIONAL type); 
   int post(FIELDS, OPTIONAL endpoint,  OPTIONAL type);
   

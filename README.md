@@ -16,8 +16,8 @@ make http requests easily in c++ using libcurl, contains two modules, raw http a
 
 # modules
 
-- Raw http
-- Veridic complete
+- **HTTP RAW (wrap curl)**
+- **VERIDIC (wrap HTTP RAW)**
 
 
 # examples 

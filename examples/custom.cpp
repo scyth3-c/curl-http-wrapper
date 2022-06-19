@@ -23,10 +23,10 @@ int main(int argc, char const *argv[])
 
     //example put
     auto res = tasty.custom(fields, headers,"PUT" ,"/user/verify");
-    auto res = tasty.custom(fields, headers, "PUT");
+    auto res2 = tasty.custom(fields, headers, "PUT");
 
-    auto res2 = tasty.custom(fields, "PUT" "/user/verify");
-    auto res3 = tasty.custom(fields, "PUT");
+    auto res3 = tasty.custom(fields, "PUT" "/user/verify");
+    auto res4 = tasty.custom(fields, "PUT");
 
     cout << res; 
 

@@ -17,6 +17,17 @@
    ./bin/bin
  
  ```
+ ## basic struct request
+ 
+ ```c++
+ 
+  Veridic Url("https://URL");
+  
+   string data = url.get();
+   
+   cout << data;
+  
+ ```
 
 
 # curl-http-wrapper

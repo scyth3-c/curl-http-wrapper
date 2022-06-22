@@ -181,6 +181,10 @@ make http requests easily in c++ using libcurl, contains two modules, raw http a
       "tres=3",
       "N=N"
     };
+    
+ ### the fields
+ 
+ the fields are the same structure but with a typedef to make the code easier to read, the only difference is the field Headers, which has another structure
   
  
  ```

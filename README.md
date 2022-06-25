@@ -23,7 +23,7 @@
  
   Veridic Url("https://URL");
   
-   string data = url.get();
+   string data = Url.get();
    
    cout << data;
   

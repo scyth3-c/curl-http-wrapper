@@ -147,12 +147,18 @@ make http requests easily in c++ using libcurl, contains two modules, raw http a
  Examples
  
  ```c++
+ in headers fields, DATA: VALUE
  
   Headers = {
     "data: 1",
     "data: 2",
-    "data: N"
+    "data: N",
+    "N: N",
   };
+ 
+ same that post >>>
+  
+ in POST fields, DATa=value
  
     POST fields = {
       "uno=1",
@@ -189,8 +195,7 @@ make http requests easily in c++ using libcurl, contains two modules, raw http a
  
  the fields are the same structure but with a typedef to make the code easier to read, the only difference is the field Headers, which has another structure
   
- 
- 
+
  
  
  

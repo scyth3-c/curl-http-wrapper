@@ -20,6 +20,7 @@
  ## basic struct request
  
  ```c++
+ //#include "http/veridic"
  
   Veridic Url("https://URL");
   
@@ -96,6 +97,24 @@ make http requests easily in c++ using libcurl, contains two modules, raw http a
 
 <img src="https://user-images.githubusercontent.com/52190352/174459753-6037a866-b0c3-4012-89ef-83e08099a178.png" width="500px"/>
 
+
+## Include Headers
+
+the structure is very flexible in case you want to use directly the one I put, as long as you add the .cpp code inside the **src/sources** folder and add it in the make like this
+
+```php
+  $(DIR_OBJ)/myFile.o
+  
+```
+
+### http/veridic
+ 
+ #include "http/veridic.hpp"
+
+### http/http
+ 
+ #include "http/http.hpp"
+ 
 
 
  ## functions and arguments

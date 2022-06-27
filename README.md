@@ -100,7 +100,7 @@ make http requests easily in c++ using libcurl, contains two modules, raw http a
 
 ## Project and Headers
 
-the structure is very flexible in case you want to use directly the one I put, as long as you add the .cpp code inside the **src/sources** folder and add it in the make like this
+the structure is very flexible in case you want to use directly the one I put, as long as you add the .cpp code inside the **src/sources** folder and add it in the **makefile** like this
 
 ```php
   $(DIR_OBJ)/myFile.o

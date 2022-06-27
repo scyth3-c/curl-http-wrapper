@@ -98,7 +98,7 @@ make http requests easily in c++ using libcurl, contains two modules, raw http a
 <img src="https://user-images.githubusercontent.com/52190352/174459753-6037a866-b0c3-4012-89ef-83e08099a178.png" width="500px"/>
 
 
-## Include Headers
+## Project and Headers
 
 the structure is very flexible in case you want to use directly the one I put, as long as you add the .cpp code inside the **src/sources** folder and add it in the make like this
 

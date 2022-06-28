@@ -1,7 +1,7 @@
 
 
+![Veridic](https://user-images.githubusercontent.com/52190352/176306430-5ead3b8f-e8ac-48bc-98cd-c89b432f673d.png)
 
-![veridic](https://user-images.githubusercontent.com/52190352/174459626-1684c6ab-8957-4a14-a7c9-f5ee421f739c.png)
 
 
 
@@ -214,6 +214,10 @@ the structure is very flexible in case you want to use directly the one I put, a
  
  the fields are the same structure but with a typedef to make the code easier to read, the only difference is the field Headers, which has another structure
   
+  ### other media
+  
+  
+![veridic](https://user-images.githubusercontent.com/52190352/174459626-1684c6ab-8957-4a14-a7c9-f5ee421f739c.png)
 
  
  

@@ -7,7 +7,7 @@ OBJETOS = $(DIR_OBJ)/main.o \
 		  $(DIR_OBJ)/http.o \
 		  $(DIR_OBJ)/veridic.o
 
-CPPFLAGS = -std=c++20 -lcurl -I$(DIR_INC)  -pthread
+CPPFLAGS = -std=c++17 -lcurl -I$(DIR_INC)  -pthread
 COMPILER = g++
 
 

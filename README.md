@@ -85,6 +85,8 @@ make http requests easily in c++ using libcurl, contains two modules, raw http a
 
 <img src="https://user-images.githubusercontent.com/52190352/174459669-46527c3c-8627-4b51-a1f5-ac9597699673.png" width="500px"/>
 
+<img src="https://github.com/scyth3-c/curl-http-wrapper/assets/52190352/d7708690-b72d-4261-a122-870aaf44cab4.png" width="500px"/>
+
 ### example put
 
 <img src="https://user-images.githubusercontent.com/52190352/174459721-7897687d-14b3-40b6-936b-29dec5589fd9.png" width="500px"/>

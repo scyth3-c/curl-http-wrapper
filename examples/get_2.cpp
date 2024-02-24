@@ -7,19 +7,28 @@ int main(int argc, char const *argv[])
 {
     Veridic tasty;
 
-    tasty.setUrl("http://example.com/");    
+    tasty.setUrl("http://example.com/");
 
     GET fields = {
-        "name=kevin",
-        "mail=kevinlevin@gmail.com",
-        "tasty=true"
+            "name=kevin",
+            "mail=kevinlevin@gmail.com",
+            "tasty=true"
     };
 
-    auto res = tasty.get(fields, "/user/verify");
-    auto res2 = tasty.get(fields);
-    auto res3 = tasty.get();
+    Headers headers = {
+            "Authorization: Bearer your_access_token",
+            "Cache-Control: no-cache",
+            "User-Agent: http-curl/1.0"
+    };
 
-    cout << res; 
+    auto Combo = tasty.get(fields, "/user/verify");
+    auto Fidls = tasty.get(fields);
+    auto Simple = tasty.get();
+
+    auto Headers = tasty.get(headers);
+    auto FieldHeaders = tasty.get(fields, headers);
+
+    cout << res;
 
     return 0;
 }

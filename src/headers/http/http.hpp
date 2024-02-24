@@ -22,21 +22,22 @@ using std::string;
 
 
 template<typename A,class...LIST>
-struct headers {
+struct headers_t {
+
     std::vector<LIST...> list;
-	headers(){}
-    headers(std::initializer_list<LIST...> arguments) {
-        if (arguments.size() > 0){
-            for(auto &it : list) {
-                aloc.push_back(it);
-            }
-            initial = true;
-        }
+    explicit headers_t(std::initializer_list<LIST...> arguments) : list(arguments) {
+          if (list.size() > 0){
+              for(auto &it : list) {
+                  std::cout << it << std::endl;
+                  aloc.push_back(it);
+              }
+              initial = true;
+          }
     }
 	bool initial{false};
 	std::vector<A> aloc{};
 };
-typedef headers<string,string> Headers;
+typedef headers_t<string,string> Headers;
 
 
 

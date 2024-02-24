@@ -3,12 +3,18 @@
 
 using  std::cout;
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     Veridic tasty;
 
-    tasty.setUrl("http://example.com/");    
-    auto res = tasty.get();
+    tasty.setUrl("http://example.com/");
+
+    Headers headers {
+            "Authorization: Bearer your_access_token",
+            "Cache-Control: no-cache",
+            "User-Agent: http-curl/1.0"
+    };
+
+    auto res = tasty.get(headers);
 
     cout << res; 
 

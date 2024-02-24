@@ -26,12 +26,19 @@ int main(int argc, char const *argv[])
     };
 
     //example post
-    auto res = tasty.post(fields, headers, "/user/verify");
-    auto res = tasty.post(fields, headers);
-    auto res2 = tasty.pos(fields, "/user/verify");
-    auto res3 = tasty.pos(fields);
+    auto justHeaders = tasty.post(headers);
 
-    cout << res; 
+    auto Combo = tasty.post(fields, headers, "/user/verify");
+    auto fieldHeaders = tasty.post(fields, headers);
+
+    auto FieldEndpoint = tasty.post(fields, "/user/verify");
+    auto Fields = tasty.post(fields);
+
+    auto Simple = tasty.post();
+    auto JustEndpoint = tasty.post("/endpoint");
+
+    
+    cout << Combo;
 
     return 0;
 }

@@ -3,8 +3,8 @@
 
 #include<iostream>
 
-constexpr auto UTILS_ERROR = "-[error critico]-";
-constexpr auto UTILS_WARNING = "-[advertencia]-";
+constexpr auto UTILS_ERROR = "-[critic error]-";
+constexpr auto UTILS_WARNING = "-[warning]-";
 constexpr auto UTILS_SUCCESS = 0;
 
 constexpr auto SYSTEM_DECORATOR = "-[BAD SYSTEM RESPONSE]-";
@@ -17,11 +17,9 @@ constexpr auto HTTP_SUCCESS = 0;
 
 constexpr auto  UTILS_USER_ERROR = 3;
 
-#define API "https://radiant-dusk-88409.herokuapp.com/"
-
 template<class... C>
-auto screen(std::ostream& out, C const &...conten) -> void {
-    ((out<<conten), ...);
+auto screen(std::ostream& out, C const &...content) -> void {
+    ((out<<content), ...);
 }
 
 

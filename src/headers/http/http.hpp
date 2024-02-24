@@ -13,6 +13,7 @@
 #include "utils/utils.hpp"
 
 #define PUT_TYPE "PUT"
+#define POST_t "POST"
 #define DELETE_TYPE "DELETE"
 #define DEFAULT "00"
 
@@ -23,13 +24,15 @@ using std::string;
 template<typename A,class...LIST>
 struct headers {
     std::vector<LIST...> list;
-	headers();
-    headers(std::initializer_list<LIST...> arguments) : list(arguments) {
-		for(auto &it : list) {
-			aloc.push_back(it);
-		}
-		initial = true;
-	}
+	headers(){}
+    headers(std::initializer_list<LIST...> arguments) {
+        if (arguments.size() > 0){
+            for(auto &it : list) {
+                aloc.push_back(it);
+            }
+            initial = true;
+        }
+    }
 	bool initial{false};
 	std::vector<A> aloc{};
 };
@@ -87,11 +90,15 @@ public:
 	~HTTP();
 	static size_t callback(void *, size_t, size_t, string *);
 
-	int get(string opcional_endpoint_= DEFAULT);
-	int get(GET&, string opcional_endpoint= DEFAULT);
+	int getSimple(string endpoint_= DEFAULT);
+	int getBase(GET*, string endpoint= DEFAULT, bool headers = false, Headers* base = nullptr);
+    int get(GET& get, Headers & headers, string endpoint = DEFAULT);
+    int getHeaders(Headers &headers, string endpoint = DEFAULT);
 
+    int postSimple(string endpoint = DEFAULT);
+    int postHeaders(Headers& headers, string end = DEFAULT);
 	int post(POST &, string endpoint = DEFAULT, string type = DEFAULT);
-	int post(POST &, Headers &, string endpoint = DEFAULT, string type = DEFAULT);
+	int post(POST *, Headers &, string endpoint = DEFAULT, string type = DEFAULT);
 
 
 	int put(PUT &, string endpoint=DEFAULT);

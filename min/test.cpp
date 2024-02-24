@@ -1,5 +1,5 @@
 #include <iostream>
-#include "http/veridic.hpp"
+#include "veridic.min.hpp"
 
 using  std::cout;
 
@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
     tasty.setUrl("http://example.com/");
     auto res = tasty.get();
 
-    cout << res; 
+    cout << res;
 
     return 0;
 }

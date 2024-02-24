@@ -11,17 +11,13 @@
 #include "http/http.hpp"
 
 #define PLAIN_TEXT "Content-Type: text/plain"
-#define N "\n"
-#define NN "\n\n"
-#define C std::cout
 
 using std::make_shared;
 using std::shared_ptr;
 using std::string;
 using std::vector;
 
-class Veridic
-{
+class Veridic {
 
 private:
     shared_ptr<HTTP> http = nullptr;
@@ -32,9 +28,14 @@ public:
     Veridic(string);
     bool setUrl(string);
 
-    string get(string opcional_endpoint = DEFAULT);
-    string get(GET &, string opcional_endpostring = DEFAULT);
+    string get(string endpoint = DEFAULT);
+    string get(Headers &, string endpoint = DEFAULT);
+    string get(GET &, string endpoint = DEFAULT);
+    string get(GET &, Headers &, string endpoint = DEFAULT);
 
+
+    string post(string endpoint = DEFAULT);
+    string post(Headers &, string endpoint = DEFAULT);
     string post(POST &, string endpoint = DEFAULT, string type = DEFAULT);
     string post(POST &, Headers &, string endpoint = DEFAULT, string type = DEFAULT);
 

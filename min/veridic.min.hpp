@@ -24,21 +24,22 @@ using std::string;
 
 
 template<typename A,class...LIST>
-struct headers {
+struct headers_t {
+
     std::vector<LIST...> list;
-	headers(){}
-    headers(std::initializer_list<LIST...> arguments) {
-        if (arguments.size() > 0){
-            for(auto &it : list) {
-                aloc.push_back(it);
-            }
-            initial = true;
-        }
+    explicit headers_t(std::initializer_list<LIST...> arguments) : list(arguments) {
+          if (list.size() > 0){
+              for(auto &it : list) {
+                  std::cout << it << std::endl;
+                  aloc.push_back(it);
+              }
+              initial = true;
+          }
     }
 	bool initial{false};
 	std::vector<A> aloc{};
 };
-typedef headers<string,string> Headers;
+typedef headers_t<string,string> Headers;
 
 
 
@@ -355,6 +356,8 @@ int HTTP::post(POST *fields, Headers &headers, string endpoint, string type) {
         curl_easy_setopt(*curl, CURLOPT_CUSTOMREQUEST, type.c_str());
     }
 
+    std::cout << headers.list.size() <<std::endl;
+
     headersList = makeHeaders(headers.aloc);
     curl_easy_setopt(*curl, CURLOPT_HTTPHEADER, headersList );
 
@@ -443,6 +446,7 @@ curl_slist *HTTP::makeHeaders(std::vector<string> headers) {
             return list;
 
         for (auto &it : headers) {
+            std::cout << it << std::endl;
             list = curl_slist_append(list, it.c_str());
         }
         return list;

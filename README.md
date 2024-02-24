@@ -108,58 +108,6 @@ the structure is very flexible in case you want to use directly the one I put, a
   $(DIR_OBJ)/myFile.o
   
 ```
-
-### http/veridic
- 
- #include "http/veridic.hpp"
-
-### http/http
- 
- #include "http/http.hpp"
- 
-
-
- ## functions and arguments
- 
-
- 
- ```c++
- 
-  constructor:
-  
-    Veridic();
-    Veridic(URL);
-  
-  void setURL(URL);
-  
-  
- 
-  [VERIDIC]
-  
-  int post(FIELDS,  HEADERS,  OPTIONAL endpoint,  OPTIONAL type); 
-  int post(FIELDS, OPTIONAL endpoint,  OPTIONAL type);
-  
-  int get(string optional_endpoint);
-  int get(GET& fields, string optional_endoint);
- 
- optional values are the endpoint of the URL, and the request type, GET and POST are separate, but PUT and DELETE are variations of the POST type
- 
- ```
-
-<hr/>
-
-```C++
-
-  int put(FIELDS, HEADERS, OPTIONAL endpoint);
-  int put(FIELDS, OPTIONAL endpoint);
-  
-  
-  int Delete(FIELDS, HEADERS, OPTIONAL endpoint);
-  int Delete(FIELDS, OPTIONAL endpoint);
-
-
-
-```
  
  ### FIELDS
   

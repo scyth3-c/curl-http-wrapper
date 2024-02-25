@@ -25,7 +25,7 @@ template<typename A,class...LIST>
 struct headers_t {
 
     std::vector<LIST...> list;
-    explicit headers_t(std::initializer_list<LIST...> arguments) : list(arguments) {
+     headers_t(std::initializer_list<LIST...> arguments) : list(arguments) {
           if (list.size() > 0){
               for(auto &it : list) {
                   std::cout << it << std::endl;
